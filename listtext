@@ -8,3 +8,4 @@
 (setq lst (vl-sort lst '(lambda (x y) (< (cdr x) (cdr y))))	    pt (getpoint "\nDiem dat Bang :" )	    txtsiz (* (getvar "dimtxt")(getvar "dimscale")))      (foreach e lst	(vla-addtext msp (cdr e) (vlax-3d-point pt) txtsiz )	(vla-addtext msp (car e) (vlax-3d-point (polar pt 0 (* 5 txtsiz))) txtsiz )	(setq pt (polar pt (/ pi -2) (* 1.5 txtsiz)))	)      )    (alert "Khong chon duoc Text.")    )  (princ))
 thank you very much
 r1
+r2
